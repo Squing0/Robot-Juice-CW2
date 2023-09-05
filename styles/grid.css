@@ -1,0 +1,161 @@
+/*Main grid for both pages.*/
+body{
+    display: grid;
+    grid-template-columns: 13vw 1fr 13vw;   /*Creates gutters.*/
+}
+header, main{
+    grid-column: 2;
+}
+footer{
+    grid-column: 1/ -1;
+}
+
+/*Nav stylings.*/
+.nav-item-container{
+    width: 100%;
+    border-top: 1px solid #9b8886;
+    border-bottom: 1px solid #9b8886;;
+    list-style: none;
+    display: flex; 
+    overflow: auto; /*When nav gets too small, can be scrolled through (good for mobile).*/
+}
+.main-nav-item{
+    flex: 1;    /*All nav items are same size*/
+    text-align: center; 
+} 
+
+/*footer styling.*/
+#footer-white{
+    display: grid;
+    grid-template-columns: 13% 54% 20% 13%; /*First and last values here are used to match gutters of whole page.*/
+}
+.cycling-article{
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: 15% 20% 30% 1fr; /*Grid within footer white grid is made for more specific styling.*/
+    grid-template-rows: 20% 1fr;
+}
+.cycling-article h2{
+    grid-column-start: 3;
+}
+.cycling-article p{
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+.cycling-article img{
+    grid-row: span 3;
+}
+.bottom-footer{
+    display: grid;
+    grid-template-columns: 13% 34% 8% 32% 13%;
+    grid-template-rows: 1fr 1fr;
+}
+.bottom-left-footer{
+    grid-column-start: 2;
+}
+.bottom-right-footer{
+    grid-column-start: 4;
+}
+
+/*Home page styling.*/
+#robot-juice-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /*Space is divided evenly between articles.*/
+    column-gap: 1%;
+}
+#news-aside-container{
+    display: grid;
+    grid-template-columns: 60% 5% 1fr;  /*Used to put space between news and side information.*/
+}
+#side-information{
+    display: grid;
+    grid-column-start: 3;
+    grid-template-rows: 40% 1fr;    /*Used to divide space between poll and competition.*/
+}
+
+/*Product page styling.*/
+#main-product{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr;   /*Divides 3 side images, main product image and product details.*/
+}
+#product-details{
+    display: grid;
+    grid-template-columns: 30% 20% 1fr;
+    grid-template-rows: 10% 10% 10% 15% 20% 35%;    /*Multiple rows used to make bigger screen sizes work.*/
+}
+.buy-button{
+    grid-column: span 3;    /*Spans 3 columns to take up full width.*/
+    align-self: center;
+}
+#price{
+    grid-column-start: 1;
+}
+.size-form{
+    grid-row-start: 3;
+    grid-column: span 2;
+}
+.qty-form{
+    grid-row-start: 3;
+}
+#product-links{
+    grid-column-start: 2;
+    grid-column: span 3;
+    align-self: center;
+}
+.product-description{
+    grid-column: span 3;    /*Spans 3 columns to take up full width.*/
+}
+#similar-products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+}
+.sim-prod-image{
+    flex: 1;
+    flex-basis: 150px; /*Based on this flex basis, the images will wrap.*/
+    flex-shrink: 1;
+}
+.product-review{
+    display: grid;
+    grid-template-columns: 10% 30% 10% 1fr;
+}
+.product-review > header{
+    grid-column-start: 2; 
+    display: grid;
+    grid-template-columns: 40% 1fr; /*A grid is used within the existing product review grid for more specifc positioning.*/
+    grid-template-rows: 50% 50%;
+}
+.product-review header h3{
+    grid-column-start: 2;
+}
+.stars{
+    align-self: end;
+}
+.review-text{
+    grid-column-start: 4; 
+    align-self: center;
+}
+
+/*Tablet styling.*/
+@media only screen and (max-width: 620px) and (min-width: 401px){
+    #robot-juice-info{
+        grid-template-columns: repeat(2, 1fr);  /*row of 4 breaks up into column and grid of 2.*/
+        grid-template-rows: repeat(2, 1fr);
+    }
+    #robot-juice-info img, #robot-juice-info p{
+        width: 70%; 
+    }
+    .cycling-article{
+    grid-template-rows: 30% 1fr;    /*Done so that heading doesn't overlap with information.*/
+    }
+    .sim-prod-image{
+        flex-basis: 300px;  /*Used so that images will wrap.*/
+    }
+}
+
+/*More tablet styling.*/
+@media only screen and (max-width: 950px) and (min-width: 621px){
+    .sim-prod-image{
+        flex-basis: 200px;  /*Used so that images will wrap.*/
+    }
+}

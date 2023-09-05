@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/poll.js"></script>
+    <title>Home Page</title>
+</head>
+<body>
+    <div id="status">Loading...</div>   <!--Will disappear when page is loaded.-->
+
+        <header> <!-- Header is used here as this content stays the same between both pages-->
+
+            <!-- robot-juice-logo -->
+            <div id="logo-container"> <!--Contains all components within main logo. -->
+                <a href="index.html" class="robot-juice-text">  <!--Links to home page-->
+                    <span id="robot-text">Robot </span>
+                    <span id="juice-text">Juice</span></a> <!---Seperate logo text for individual styling.-->
+                <a href="index.html" id="logo-small-text">fictitious cycle lubricants</a>
+            </div>
+
+            <!-- main nav -->          
+            <nav aria-label="Main">     <!-- Nav specificed as main for accessibility.-->
+                <ul class="nav-item-container">
+                <li class="main-nav-item active"><a href="index.html" class="active">Home</a></li>    <!-- First 2 items here work as links and others link back to whatever page is selected.-->
+                <li class="main-nav-item"><a href="product.html">Products</a></li>
+                <li class="main-nav-item"><a href="#">Protect</a></li>
+                <li class="main-nav-item"><a href="#">Stocklist's</a></li>
+                <li class="main-nav-item"><a href="#">Events</a></li>
+                <li class="main-nav-item"><a href="#">Reviews</a></li>
+                </ul> 
+            </nav>
+
+        </header>
+    <main>
+
+        <!-- main banner and tagline -->
+        <section> 
+            <img src="images/robot-juice-images/robotbanner.jpg" alt="Main robot banner with a robot on a bicycle" class="banner-image">
+            <h1 class="index-main-heading">Robot Juice is the ultimate fictitious
+                 bicyle and motorcycle lubricant oils.</h1> <!-- h1 tag used here as this is the main content of the page (the logo isn't a h1 as it is used between pages).-->
+        </section>
+
+        <!-- robot juice articles -->
+        <section id="robot-juice-info"> 
+            <article class="robot-juice-info-article"> <!-- Each article is given the same class are multiple are used with the same styling.-->
+                <img src="images/robot-juice-images/bikechain-bikeoil.jpg" alt="Black tyre">
+                <h2>Bike Oil</h2>
+                <p>Stops and protects against rust reduces friction
+                 on moving parts and is essential on any cycle.</p>
+            </article>
+            <article class="robot-juice-info-article">
+                <img src="images/robot-juice-images/cycleside-drylubrication.jpg" alt="Bottom of person riding on bicycle in dry weather">
+                <h2>Dry Lubricant</h2>
+                <p>Perfect chain lubricant for dry road riding. 
+                Resists water penetration and wash-off easily.</p>
+            </article>
+            <article class="robot-juice-info-article">
+                <img src="images/robot-juice-images/frontcycle-wetlubrication.jpg" alt="Bottom of person riding on bicyle in wet weather">
+                <h2>Wet Lubricant</h2>
+                <p>A thick, heavy duty lube designed to stick to the chain in wet conditions. 
+                Ideal for extreme weather and long distance riding.</p>
+            </article>
+            <article class="robot-juice-info-article">
+                <img src="images/robot-juice-images/productreviews.jpg" alt="Papers being written">
+                <h2>Product Reviews</h2>
+                <p>Read what the press and our customers say about our excellent products.</p>
+            </article>
+        </section>
+
+        <!-- latest news and side information-->
+        <section id="news-aside-container">
+
+            <!-- latest news -->
+            <section id="latest-news-articles"> 
+                <h2>Latest News</h2>
+                <article class="news-article">
+                    <h3>News item one!</h3> <!--- Again, each news article is given the same class as they all have the same styling. -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, 
+                    mi eget volutpat ullamcorper, metus neque tempor purus, nec molestie urna ex vitae enim. 
+                    Nullam tempor pretium scelerisque. Sed ex arcu, feugiat non arcu scelerisque, iaculis consectetur ligula. 
+                    Duis enim quam, aliquam vehicula molestie id, consectetur a risus. Vestibulum venenatis tempus ultrices.</p>
+                    <p class="date"><time datetime="2012-09">September, 2012</time></p>
+                </article>
+                <article class="news-article">
+                    <h3>News item one!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, 
+                        mi eget volutpat ullamcorper, metus neque tempor purus, nec molestie urna ex vitae enim. 
+                        Nullam tempor pretium scelerisque. Sed ex arcu, feugiat non arcu scelerisque, iaculis consectetur ligula.</p>
+                        <p class="date"><time datetime="2012-09">September, 2012</time></p>
+                </article>
+                <article class="news-article">
+                    <h3>News item one!</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, 
+                        mi eget volutpat ullamcorper, metus neque tempor purus, nec molestie urna ex vitae enim. 
+                        Nullam tempor pretium scelerisque. Sed ex arcu, feugiat non arcu scelerisque, iaculis consectetur ligula.</p>
+                        <p class="date"><time datetime="2012-09">September, 2012</time></p>
+                </article>
+            </section>
+
+            <!-- side information -->
+            <aside id="side-information">
+
+                <!--- JavaScript poll -->
+                <section id="reader-poll">
+                    <h2>Reader Poll</h2>
+                    <form>  
+                        <p>Are Robot Juice the best and most usable
+                        and accessible fake oils around?</p>
+                        <label class="radio-label"><input type="radio" name="yes" value="Yes" class="radio-button" id="yes-button">Yes</label>  <!--Both class and ID used as helps in JavaScript.-->
+                        <label class="radio-label"><input type="radio" name="no" value="No" class="radio-button" id="no-button">No</label>   
+                        <button class="radio-submit">Submit</button>                 
+                    </form>
+                </section>
+
+                <!-- reader competition -->
+                <section id="reader-competition">
+                    <h2>Competition</h2>
+                    <p>Win absolutely nothing by entering this extremley expensive competition. 
+                    Robot Juice will not send you a full range of our cycling 
+                    and motorcycle oils and lubricants as we do not exist. 
+                    But just for fun..</p>
+                    <p class="film_address">Which Film is our address made up from?</p>
+                    <ol id="film-list"> <!-- the ')' are manually added in here as there wasn't an applicable list style.-->
+                        <li>a) Armageddon</li>
+                        <li>b) Harry Potter</li>
+                        <li>c) The Simpson (Movie)</li> 
+                    </ol>
+                     <p>answers on a postcard please.</p>   
+                </section>
+            </aside>
+        </section>
+    </main>
+    
+    <!-- white/red footer-->
+    <footer>    
+        <section id="footer-white">
+        <article class="cycling-article">
+            <img src="images/robot-juice-images/cyclemagazine.jpg" alt="Cycling magazine front page">
+            <h2>Latest Reviews</h2>
+            <p>Cycling magezine has given Robot Juice a 5 star rating in its latest reviews of dry lubricants. 
+            Robot Juice Dry lube was rated the highest out of over 40 top brand dry lubes</p> 
+        </article>
+        <nav aria-label="Secondary" class="secondary-nav">  <!-- Nav specificed as secondary for accessibility.-->
+            <h2>Links</h2>
+            <p><a href="https://www.edgehill.ac.uk">Edge Hill University</a></p>
+            <p><a href="https://www.edgehill.ac.uk/person/david-walsh/staff/">Dave Walsh</a></p>
+            <p><a href="https://twitter.com/walsh_d">https://twitter.com/walsh_d</a></p>
+            <p><a href="https://learningedge.edgehill.ac.uk/ultra/courses/_291725_1/outline">CIS1110 - Web Design and Development module</a></p>
+        </nav>
+    </section>
+        <section class="bottom-footer"> <!-- bottom footer split into 2 for ease of positioning.-->
+            <div class="bottom-left-footer">
+                <p class="address">Robot Juice Fictitious Products Not Ltd , Until 9%, Pivet Drive, Little Whingeing Surrey DN18 5RP</p>
+                <p class="contact-details">Telephone +44 (0)1695 657648 Email: walshd@edgehill.ac.uk</p>
+            </div>
+            <div class="bottom-right-footer">
+                <p class="bottom-footer-links"><a href="#" class="bottom-footer-link">Contact us</a>|<a href="#" class="bottom-footer-link">Privacy</a>|<a href="#" class="bottom-footer-link">Terms & Conditions</a>|<a href="#" class="bottom-footer-link">Accessibility</a></p>
+                <p class="Copyright">Copyright © 2018 Dave Walsh Design by Dave Walsh</p>
+            </div>
+        </section>
+    </footer>     
+</body>
+</html>

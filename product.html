@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/grid.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/reviews.js"></script>
+        <title>Product Page</title>
+    </head>
+    <body>
+        <div id="status">Loading...</div>   <!--Will disappear when page is loaded.-->
+
+        <header> <!-- Header is used here as this content stays the same between both pages-->
+
+            <!-- robot-juice-logo -->
+            <div id="logo-container"> <!--Contains all components within main logo. -->
+                <a href="index.html" class="robot-juice-text">  <!--Links to home page-->
+                    <span id="robot-text">Robot </span>
+                    <span id="juice-text">Juice</span></a> <!---Seperate logo text for individual styling.-->
+                <a href="index.html" id="logo-small-text">fictitious cycle lubricants</a>
+            </div>
+
+            <!-- main nav -->          
+            <nav aria-label="Main">     <!-- Nav specificed as main for accessibility.-->
+                <ul class="nav-item-container">
+                <li class="main-nav-item"><a href="index.html">Home</a></li>    <!-- First 2 items here work as links and others link back to whatever page is selected.-->
+                <li class="main-nav-item active"><a href="product.html" class="active">Products</a></li>
+                <li class="main-nav-item"><a href="#">Protect</a></li>
+                <li class="main-nav-item"><a href="#">Stocklist's</a></li>
+                <li class="main-nav-item"><a href="#">Events</a></li>
+                <li class="main-nav-item"><a href="#">Reviews</a></li>
+                </ul> 
+            </nav>
+
+        </header>
+    <main>
+
+        <!-- main product -->
+        <section id="main-product"> <!--IDs used for main product and side images as they are containers and will only appear once.-->
+            <div id="three-side-images"> 
+                    <img src="images/robot-juice-images/prod-thumb1.jpg" alt="First product thumbnail showing bike oil." class="side-image"> 
+                    <img src="images/robot-juice-images/prod-thumb2.jpg" alt="Second product thumbnail showing tyre." class="side-image">
+                    <img src="images/robot-juice-images/prod-thumb3.jpg" alt="Third product thumbnail showing oil." class="side-image">
+            </div>
+            <div class="main-image">
+                    <img src="images/robot-juice-images/robotjuicebikeoil.jpg" alt="Main Product Image showing bike oil." class="main-product-image">
+            </div>
+            <article id="product-details"> 
+                <h1 class="product-title">Bike Oil</h1> <!--h1 is used here as product title is the top heading of the page.-->
+                <p id="price">£99.99</p>    <!--ID used here as there will only be one price.-->
+                <form action="#" class="size-form"> 
+                    <select name="size" id="size-select"> <!-- Simple form with selectable options here used for selecting the size and quantity of the product-->
+                        <option value="">Size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                    </form>
+                    <form action="#" class="qty-form">
+                    <select name="quantity" id="quantity-select">
+                        <option value="">Qty</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                    </select>
+                </form>
+                <button class="buy-button">BUY NOW</button>
+                <section id="product-links"> 
+                    <p class="stocklist-text"><a href="#">FIND NEAREST STOCKLIST</a></p>
+                    <div>
+                    <p>     <!--Both share text and images put into singular p tag so they all appear on same line.-->
+                        SHARE
+                        <a href="#"><img src="images/robot-juice-images/facebook.jpg" alt="Facebook icon"></a>
+                        <a href="#"><img src="images/robot-juice-images/twitter.jpg" alt="Twitter icon"></a>
+                        <a href="#"><img src="images/robot-juice-images/email.jpg" alt="Email icon"></a>
+                    </p>                                
+                    </div>
+                </section>
+                <p class="product-description">Robot Juice bike oil for bicycles stops rust and other corrosion from starting. 
+                Applied to already corroding metals, it breaks down the corrosion 
+                and starts preventing it from building up and protects from the point of contact.</p>
+            </article>
+        </section>
+
+        <!-- similar products -->
+        <section id="sim-prod-container">
+        <h2 class="sim-prod-heading">Similar Products</h2>  <!-- All sim images put into own containers for ease of positioning.-->
+        <section id="similar-products"> 
+            <div class="sim-prod-image"> 
+                <img src="images/robot-juice-images/simprod.jpg" alt="First similar product"> 
+            </div>
+            <div class="sim-prod-image">
+                <img src="images/robot-juice-images/simprod2.JPG" alt="Second similar product">
+            </div>
+            <div class="sim-prod-image">
+                <img src="images/robot-juice-images/simprod3.JPG" alt="Third similar product">
+            </div>
+            <div class="sim-prod-image">
+                <img src="images/robot-juice-images/simprod4.JPG" alt="Fourth similar product">
+            </div>
+            <div class="sim-prod-image">
+                <img src="images/robot-juice-images/simprod5.JPG" alt="Fifth similar product">
+            </div>
+            <div class="sim-prod-image">
+                <img src="images/robot-juice-images/simprod6.JPG" alt="Sixth similar procuct">
+            </div>
+        </section>
+    </section>
+
+    <!-- product reviews -->
+        <section id="product-reviews">
+            <h2>Product Reviews <span id="prod-header-stars">*****</span></h2> <!-- span used here to make stars specifcally selectable with unique ID.-->
+            <!--reviews.js file will fill in reviews here.-->
+        </section>
+        <div id="review-button-container">
+            <button class="show">READ ALL REVIEWS</button>
+        </div>
+    </main>
+    
+    <!-- white/red footer-->
+    <footer>    
+        <section id="footer-white">
+        <article class="cycling-article">
+            <img src="images/robot-juice-images/cyclemagazine.jpg" alt="Cycling magazine front page">
+            <h2>Latest Reviews</h2>
+            <p>Cycling magezine has given Robot Juice a 5 star rating in its latest reviews of dry lubricants. 
+            Robot Juice Dry lube was rated the highest out of over 40 top brand dry lubes</p> 
+        </article>
+        <nav aria-label="Secondary" class="secondary-nav">  <!-- Nav specificed as secondary for accessibility.-->
+            <h2>Links</h2>
+            <p><a href="https://www.edgehill.ac.uk">Edge Hill University</a></p>
+            <p><a href="https://www.edgehill.ac.uk/person/david-walsh/staff/">Dave Walsh</a></p>
+            <p><a href="https://twitter.com/walsh_d">https://twitter.com/walsh_d</a></p>
+            <p><a href="https://learningedge.edgehill.ac.uk/ultra/courses/_291725_1/outline">CIS1110 - Web Design and Development module</a></p>
+        </nav>
+    </section>
+        <section class="bottom-footer"> <!-- bottom footer split into 2 for ease of positioning.-->
+            <div class="bottom-left-footer">
+                <p class="address">Robot Juice Fictitious Products Not Ltd , Until 9%, Pivet Drive, Little Whingeing Surrey DN18 5RP</p>
+                <p class="contact-details">Telephone +44 (0)1695 657648 Email: walshd@edgehill.ac.uk</p>
+            </div>
+            <div class="bottom-right-footer">
+                <p class="bottom-footer-links"><a href="#" class="bottom-footer-link">Contact us</a>|<a href="#" class="bottom-footer-link">Privacy</a>|<a href="#" class="bottom-footer-link">Terms & Conditions</a>|<a href="#" class="bottom-footer-link">Accessibility</a></p>
+                <p class="Copyright">Copyright © 2018 Dave Walsh Design by Dave Walsh</p>
+            </div>
+        </section>
+    </footer>     
+</body>
+</html>

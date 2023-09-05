@@ -1,0 +1,437 @@
+/*General styling for both pages:*/
+
+/*Margin and padding set to 0 as a total reset no matter what browser used on.*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+h1 {
+    font-family: "iceberg";
+    color: #575859;
+    font-size: 1.875rem;
+}
+main h2, .product-title{    /*Product title also included as styling despite being h1 is same as h2*/
+    font-family: "iceberg";
+    color: #575859;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+body{
+    background: #eeeeee;
+}
+main,footer, header nav{
+    font-family: Arial, serif;
+}
+
+/* These styles affect multiple specific elements across both pages */
+
+button{     
+    background: #C5110B; 
+    color: #ffffff;
+    border-style: none;
+}
+#product-details button, #product-links a:first-of-type{ 
+    font-weight: bold;
+}
+
+/* These styles affect the header specifically: */
+
+/*Logo styling*/
+#robot-text{
+    font-family: "Damion", serif;
+    font-size: 3.875rem;    /*Translates to 62px. (Rem is used as more responsive than pixels for whole page)*/
+    color: #C5110B;
+}
+#juice-text{
+    color: #000000;
+    font-family: "Damion", serif;
+    font-size: 3.875rem;
+}
+#logo-small-text{
+    color: #333333;
+    font-family: Arial, serif;
+    font-size: 0.6875rem;   /*Translates to 11px*/
+    text-align: right;
+    margin-top: -20px;  /*Used to place tagline below robot juice heading.*/
+}
+#logo-container{
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+#logo-container a{ 
+    text-decoration: none;
+    display: block;
+}
+.active{
+    background-color: #C5110B; 
+    color: #eeeeee;
+}
+.main-nav-item:hover{
+    background-color: #C5110B; 
+}
+.main-nav-item:hover a {
+    color: #eeeeee;
+}
+
+/*Nav styling.*/
+.main-nav-item{
+    padding: 1.5rem 3rem;
+    display: inline-block;
+    text-decoration: none;
+    position: relative; 
+}
+.main-nav-item a{
+    text-decoration: none;
+}
+.main-nav-item:not(:last-child) ::after{    /*Places small lines after every nav item but not the last nav item.*/
+    position: absolute;
+    border: 1px solid grey;
+    border-width: 1px 1px 0 0;
+    content: ' ';
+    height: 50%;
+    top: 25%;
+    left: 100%;   
+}
+header nav a, header nav p{
+    color: #9b8886;
+}
+
+/*These styles affect the footer specifically*/
+
+footer{
+    border-top: 1px solid #9b8886;
+    background: #ffffff;    /*Places white background on entire footer.*/
+    margin-top: 1rem;
+}
+.bottom-right-footer a{
+    text-decoration: none;
+}
+.bottom-footer-link{
+    color: #000000;
+    display: inline-block;
+}
+.cycling-article, .secondary-nav h2, .secondary-nav a{
+    color: #C5110B;
+}
+.bottom-footer{
+    background: #C5110B;    /*places red background on bottom footer specifically.*/
+    font-weight: bold;
+}
+#footer-white{
+    margin: 2rem 0;
+}
+.secondary-nav p{
+    padding: 0.5rem 0;
+}
+.bottom-left-footer p:first-of-type, .bottom-right-footer p:first-of-type{
+    padding-bottom: 0.3rem;
+}
+
+/* These styles affect the home page specifically*/
+
+.index-main-heading{
+    font-weight: 400;
+    margin: 2rem 0;
+    text-align: center
+}
+.banner-image{
+    border-bottom: 6px solid #999999;
+    width: 100%;    /*Because the width is 100% of the container, the image scales.*/
+}
+#robot-juice-info{
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+}
+.robot-juice-info-article, .robot-juice-info-article p, .robot-juice-info-article img{
+    width: 100%;    /*Helps with scaling, especially on bigger sizes*/  
+}
+.robot-juice-info-article img{
+    box-shadow: 0px 4px 4px #858585;
+}
+.robot-juice-info-article h2{
+    margin-left: 0;
+}
+#news-aside-container{
+    margin: 2rem 0;
+    margin-bottom: 4rem;
+}
+.date{
+    font-style: italic;
+    text-align: right;
+    color: #C5110B;
+}
+.news-article,.news-article h3{
+    margin: 1rem;
+    margin-left: 0;
+}
+#latest-news-article h2, #side-information h2{
+    margin-top: 0;
+}
+.news-article h3{
+    color: #9b8886;
+}
+#side-information{
+    padding: 1rem;
+    background: #ffffff;
+}
+#reader-poll p{
+    color: #C5110B;
+}
+.radio-label{
+    display: block;
+}
+.radio-submit{
+    display: none;
+    padding: 0.5rem;
+    border-radius: 12.5%;
+}
+.radio-button, .radio-submit{
+    margin-left: 20%;
+    margin-top: 1rem;
+}
+.radio-submit{
+    margin-top: 0;
+}
+.film_address{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#reader-competition p:last-of-type{
+    margin-top: 1rem;
+}
+#film-list{
+    list-style: none;
+}
+
+/*Theses styles affect the product page specifically*/
+#main-product{
+    padding: 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    border-bottom: 1.5px solid #000000;
+}
+.side-image{
+    border: 1.5px solid #C5110B;
+    margin: 0.2rem;
+}
+.main-product-image{
+    border: 5px solid #ffffff;
+    border-left-width: 4px;
+    margin-left: 0.4rem;
+    width: 100%;
+}
+#price{
+    color: #C5110B;
+    font-weight: bold;
+}
+#size-select, #quantity-select{
+    font-weight: bold;
+    width: 95%;
+    height: 90%;
+}
+#product-details{
+    margin-left: 2rem;  /*Puts space between product details and main image.*/
+}
+.product-title{
+    margin: 0;
+}
+.buy-button{ 
+    padding: 0.5rem 2rem;
+}
+#product-links{
+    text-align: right;
+}
+#product-links a:first-child{
+    text-decoration: none;
+    color: #9b8886;
+}
+#product-links p{
+    color: #9b8886;
+    font-weight: bold;
+}
+#similar-products{
+    border-bottom: 1.5px solid #000000;
+    padding-bottom: 1rem;
+}
+#similar-products img{
+    width: 138px;   /*Makes all images the same size and width.*/
+    height: 138px;
+}
+
+/*These styles are used for the reviews in the product page.*/
+#status{
+    position: absolute;     /*Always appears in top corner and will disappear once page has loaded.*/
+    background: yellow;
+    color: black;
+    border: 2px solid #ffffff;
+    padding: 0.5rem;
+}
+#prod-header-stars{
+    color: #C5110B;
+}
+.product-review, .product-review:last-of-type{
+    border-top: 1px solid #9b8886;
+    padding: 1rem;
+}
+.product-review:last-of-type{
+    border-bottom: 1px solid #9b8886 
+}
+.product-review img{
+    border-radius: 12px; /*Creates rounded edges.*/
+}
+.red_stars, .black_stars{
+    font-family: "iceberg"; /*iceberg used to get specific look of asterisks.*/
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.red_stars{
+    color: #C5110B;
+}
+.black_stars{
+    color: black;
+}
+#review-button-container{ 
+    margin: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+#review-button-container button{ 
+    padding: 0.5rem 1rem;
+    border-radius: 12px;    /*Creates rounded edges.*/
+}
+
+/*mobile design: */
+@media only screen and (max-width: 400px){
+
+    /*These styles affect the home page specifically.*/
+    .robot-juice-info-article p, .robot-juice-info-article h2{
+        text-align: center;
+    }
+    .robot-juice-info-article p{
+        margin-bottom: 1rem;
+    }
+    .robot-juice-info-article img{
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+    #robot-juice-info{
+        grid-template-columns: 1fr; /*Used so that all articles appear in one continuous line.*/
+    }
+    .radio-button, .radio-submit{
+        margin-left: 35%;
+        margin-top: 1rem;
+    }
+    #reader-poll h2, #reader-competition h2, #reader-competition p:last-of-type{    
+        text-align: center;
+    }
+    #side-information{
+        padding-top: 0;
+    }
+    #film-list{
+        list-style-position: inside;
+        text-align:center;
+    }
+
+    /*These styles affect the product page specifically.*/
+    .main-product-image{
+        width: 100%;
+    }
+    #product-details{
+        margin: 0;
+    }
+    .side-image{
+        margin: auto;
+    }
+    .product-title, #price{
+        text-align: center;
+    }
+    #quantity-select, #size-select{
+        margin-left: 40%;
+    }
+    #size-select, #quantity-select{
+        width: auto;
+    }
+    #quantity-select{
+        margin-top: 0.5rem;
+    }
+    .buy-button{
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    #similar-products{
+        display: block;
+    }
+    .sim-prod-image, #similar-products h2{
+        text-align: center;
+    }
+
+    #prod-header-stars{
+        padding-left: 1rem;
+    }
+    .product-review img{
+        margin-bottom: 1rem;
+    }
+    .product-review h3, .review-text{
+       text-align: center;
+    }
+    .stars{
+        text-align: right;      
+    }
+    .stocklist-text, .share-text{
+        margin-top: 0.5rem;
+    }
+    #product-icon-container{
+        margin-bottom: 0.5rem;
+    }
+    .product-description{
+        text-align: center;
+    }
+
+    /*These styles affect the header, body and main.*/
+    body{
+        display: block;
+    }
+    header, main{
+        padding: 0 2rem;    /*Used to recreate gutters.*/
+    }
+
+    /*These styles affect the footer specifically.*/
+    footer{
+        margin-top: 1rem; 
+    }
+    footer img{
+        display: block;
+        margin: auto;
+    }
+    footer h2, footer article p{
+        text-align: center;
+        margin: 1rem 0;
+    }
+    footer article p{
+        padding-left: 0.5rem;
+    }
+    footer nav p{
+       text-align: left;
+       padding: 0.5rem;
+       padding-left: 1rem;
+    }
+    .address, .contact-details, .bottom-footer-links{
+        margin: 1rem;
+        margin-top: 0;
+    }
+    .Copyright{
+        margin: 2rem 1rem;
+        margin-bottom: 0;
+    }
+
+    /*Grid and flex are removed from several sections as they isn't needed for mobile designs.*/
+    .secondary-nav, .product-review, #main-product, #footer-white, .cycling-article, .secondary-nav, .bottom-footer, #product-details, #news-aside-container, #side-information{
+        display: block;
+    }
+}
